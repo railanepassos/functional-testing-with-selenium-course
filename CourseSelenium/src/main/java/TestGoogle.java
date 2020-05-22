@@ -2,8 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class TestGoogle {
 	
@@ -17,6 +17,7 @@ public class TestGoogle {
 		//WebDriver driverIE = new InternetExplorerDriver();
 		//driverFirefox.get("http://www.google.com");
 		driverChrome.get("http://www.google.com");
+		driverChrome.manage().window().maximize();
 		//driverIE.get("https://www.google.com");
 		//System.out.println(driver.getTitle());
 		
@@ -24,6 +25,8 @@ public class TestGoogle {
 		//Assert.assertEquals("Google", driverFirefox.getTitle());
 		Assert.assertEquals("Google", driverChrome.getTitle());
 		//Assert.assertEquals("Google", driverIE.getTitle());
+		
+		driverChrome.quit();
 		
 		
 		
